@@ -1,0 +1,36 @@
+Angular Basics Topics :
+1. introduction
+
+Usefull links :
+
+https://desktop.github.com/ ---- GIT
+
+https://www.tutorialspoint.com/angular4/ 
+
+https://coursetro.com/courses/19/Learn-Angular-5-from-Scratch---Angular-5-Tutorial
+
+Basics :
+Angular 4 is a JavaScript framework for building web applications and apps in JavaScript, html, and TypeScript, which is a superset of JavaScript. Angular provides built-in features for animation, http service, and materials which in turn has features such as auto-complete, navigation, toolbar, menus, etc. The code is written in TypeScript, which compiles to JavaScript and displays the same in the browser.
+The structure of Angular is based on the components/services architecture. AngularJS was based on the model view controller. 
+AngularJS is based on the model view controller, whereas Angular is based on the components structure. Angular uses TypeScript.
+
+Environment Setup :
+Nodejs - https://nodejs.org/en/download/
+	C:\>node –v
+Npm
+	C:\>npm –v
+Angular CLI - https://cli.angular.io/
+	npm install –g @angular/cli@latest
+	ng -v
+IDE VSCODE - https://code.visualstudio.com/
+
+First angular application :
+1. npm install –g @angular/cli@latest
+2. ng new my-dream-app // name of the project which creates default application of angular
+3. cd my-dream-app
+4. Start the ng server - 
+The ng serve command builds the application and starts the web server.
+ng serve 
+http://localhost:4200/
+ng serve --host 0.0.0.0 –port 4205
+http://localhost:4205/

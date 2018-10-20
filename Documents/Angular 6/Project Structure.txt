@@ -1,0 +1,23 @@
+Project Structure :
+
+e2e − end to end test folder. Mainly e2e is used for integration testing and helps ensure the application works fine.
+
+node_modules − The npm package installed is node_modules. You can open the folder and see the packages available.
+
+src − This folder is where we will work on the project using Angular
+
+angular.json − It basically holds the project name, version of cli, etc.
+
+.editorconfig − This is the config file for the editor.
+
+.gitignore − A .gitignore file should be committed into the repository, in order to share the ignore rules with any other users that clone the repository.
+
+karma.conf.js − This is used for unit testing via the protractor. All the information required for the project is provided in karma.conf.js file.
+
+package.json − The package.json file tells which libraries will be installed into node_modules when you run npm install.
+
+protractor.conf.js − This is the testing configuration required for the application.
+
+tsconfig.json − This basically contains the compiler options required during compilation.
+
+tslint.json − This is the config file with rules to be considered while compiling.

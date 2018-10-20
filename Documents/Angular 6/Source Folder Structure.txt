@@ -1,0 +1,76 @@
+Source Folder Structure :
+The src folder is the main folder, which internally has a different file structure.
+app folder :
+It contains the files described below. These files are installed by angular-cli by default.
+
+app.module.ts − If you open the file, you will see that the code has reference to different libraries, which are imported. Angular-cli has used these default libraries for the import – angular/core, platform-browser. 
+The names itself explain the usage of the libraries. They are imported and saved into variables such as declarations, imports, providers, and bootstrap.
+
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+
+@NgModule({
+   declarations: [
+      AppComponent
+   ],
+   imports: [
+      BrowserModule
+   ],
+   providers: [],
+   bootstrap: [AppComponent]
+})
+
+export class AppModule { }
+
+declarations − In declarations, the reference to the components is stored. The Appcomponent is the default component that is created whenever a new project is initiated.
+imports − This will have the modules imported as shown above. At present, BrowserModule is part of the imports which is imported from @angular/platform-browser.
+providers − This will have reference to the services created. The service will be discussed in a subsequent chapter.
+bootstrap − This has reference to the default component created, i.e., AppComponent.
+
+app.component.css − You can write your css structure over here.
+
+app.component.html − The html code will be available in this file.
+
+app.component.spec.ts − These are automatically generated files which contain unit tests for source component.
+
+app.component.ts − The class for the component is defined over here. You can do the processing of the html structure in the .ts file. The processing will include activities such as connecting to the database, interacting with other components, routing, services, etc.
+
+import { Component } from '@angular/core';
+
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+   title = 'app';
+}
+
+Assets : you can save your images, js files in this folder.
+
+Environment : This folder has the details for the production or the dev environment. The folder contains two files.
+
+favicon.ico : This is a file that is usually found in the root directory of a website.
+
+environment.prod.ts, environment.ts : Both the files have details of whether the final file should be compiled in the production environment or the dev environment.
+
+polyfill.ts : This is mainly used for backward compatibility.
+
+styles.css : This is the style file required for the project.
+
+test.ts : Here, the unit test cases for testing the project will be handled.
+
+tsconfig.app.json : This is used during compilation, it has the config details that need to be used to run the application.
+
+index.html : The body has <app-root></app-root>. This is the selector which is used in app.component.ts file and will display the details from app.component.html file.
+
+main.ts : the file from where we start our project development. It starts with importing the basic module which we need. Right now if you see angular/core, angular/platform-browser-dynamic, app.module and environment is imported by default during angular-cli installation and project setup.
+
+tsconfig.spec.json : This helps maintain the details for testing.
+main.ts ->
+The platformBrowserDynamic().bootstrapModule(AppModule) has the parent module reference AppModule. Hence, when it executes in the browser, the file that is called is index.html. Index.html internally refers to main.ts which calls the parent module, i.e., AppModule when the following code executes −
+platformBrowserDynamic().bootstrapModule(AppModule);
+When AppModule is called, it calls app.module.ts which further calls the AppComponent based on the boostrap as follows −
+bootstrap: [AppComponent]
+In app.component.ts, there is a selector: app-root which is used in the index.html file. This will display the contents present in app.component.html.
